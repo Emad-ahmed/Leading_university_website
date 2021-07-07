@@ -1,0 +1,12 @@
+.jumbotron
+{
+    background: rgb(230, 227, 222);
+    padding: 3%;
+}
+
+#mainhome
+{
+    position: absolute;
+    left: 3%;
+    
+}

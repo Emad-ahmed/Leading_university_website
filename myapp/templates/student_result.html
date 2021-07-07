@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+<div style="margin-top: 10%;" class="text-center" >
+    <div class="w-75 m-auto">
+    <h1>{{stu.admin.first_name}} {{stu.admin.last_name}}</h1>
+    <img src="{{stu.profile_pic.url}}" alt="" class="img-fluid" style="height: 150px; width: 150px; object-fit: cover; border-radius: 50%;" >
+    <p>Id No: {{stu.student_id_no}}</p>
+    <p>Session: {{stu.session_year_id.session_start_year}}-{{stu.session_year_id.session_end_year}}</p>
+    
+    
+
+    <table class="table mt-4">
+        <thead>
+          <tr class="text-center">
+            <th scope="col">Course</th>
+            <th scope="col">Subject Code</th>
+            <th scope="col">Subject Marks</th>
+            <th scope="col">Assignment Marks</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for result in myresult %}
+          <tr class="text-center">
+            <th scope="row">{{result.subject_id.course_id}}</th>
+            <td>{{result.subject_id}}</td>
+            <td>{{result.subject_exam_marks}}</td>
+            <td>{{result.subject_assignment_marks}}</td>
+          </tr>
+          {% endfor %}
+         
+         
+        </tbody>
+      </table>
+    </div>
+</div>
+    
+{% endblock %}
+

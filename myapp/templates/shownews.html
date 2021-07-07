@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/notice.css' %}">
+
+
+
+
+
+<div class="container text-center">
+   
+    <h1 class="text-center text-danger mb-3" style="margin-top: 13%;">{{shownews.title}}</h1>
+    <a href="/" id="mainhome"><i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i></a>
+    <div class="jumbotron w-100 m-auto">
+        <img src="{{shownews.newsimg.url}}" alt="" class="h-50 w-50 mb-5">
+        <div class="w-75 m-auto">
+        <p>{{shownews.allnews}}</p>
+    </div>
+    </div>
+</div>
+
+
+{% endblock %}
+

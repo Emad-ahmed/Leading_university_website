@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/bba.css' %}">
+
+<div class="container">
+    <div class="jumbotron" style="margin-top: 12%;">
+        <h1 class="text-center">Faculty Members of Business Administration</h1>
+        <hr>
+        <div class="mt-5">
+        <div class="row">
+            {% for bba in bba_sir %}
+        <div class="col-lg-6 text-center">
+            
+           <h4> {{bba.course_name}}</h4>
+           <img src="{{bba.teacherimg.url}}" alt="" class="w-50 h-50" style="object-fit: cover;">
+           <p>{{bba.teacher_name}}</p>
+           <p>Mobile:+{{bba.Phone}}</p>
+        </div>
+        {% endfor %}
+        </div>
+        </div>  
+        
+    </div>
+</div>
+
+
+
+{% endblock %}
+

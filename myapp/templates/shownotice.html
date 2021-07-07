@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/notice.css' %}">
+
+
+
+
+
+<div class="container text-center">
+   
+    <h1 class="text-center text-danger mb-3" style="margin-top: 13%;">{{shownot.title}}</h1>
+    <a href="/" id="mainhome"><i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i></a>
+    <div class="jumbotron w-75 m-auto">
+        <img src="{{shownot.noticeimg.url}}" alt="">
+        <p>{{shownot.allnotice}}</p>
+    </div>
+</div>
+
+
+{% endblock %}
+

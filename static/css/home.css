@@ -1,0 +1,74 @@
+.carousel-item img{
+    height: 100vh;
+}
+
+#mujibimg
+{
+
+    margin-top: 10%;
+    position: absolute;
+    width: 60vw;
+    height: 60vh;
+    z-index: 1;
+    object-fit: cover;
+}
+
+#leadmain h1{
+    text-transform: uppercase;
+}
+
+#leadmain
+{
+    position: absolute;
+    margin-top: 7%;
+    z-index: 100;
+    right: 10%;
+}
+
+#leadmain .btn{
+    color: #182C61;
+}
+
+.list-group-item a
+{
+    text-decoration: none;
+}
+
+.list-group-item:hover
+{
+    background: tomato;
+    
+}
+
+.nothr
+{
+    background-color: blue;
+}
+
+.list-group-item a:hover
+{
+    color: black;
+}
+
+
+
+#newsa
+{
+    text-decoration: none;
+    
+}
+#newsa:hover
+{
+    color: #2e86de;
+}
+
+.mycard:hover
+{
+    background: #ee5253;
+    color: white;
+}
+
+#bba p:hover
+{
+    text-decoration: none;
+}
